@@ -1,0 +1,871 @@
+:root {
+  --bgMain: #f3f8f7;
+  --blue: #2270e2;
+  --white: #fff;
+  --black: #000;
+  --star: #fab700;
+  --font: "Afacad", sans-serif;
+  --button-hover: linear-gradient(
+    90deg,
+    rgba(0, 10, 36, 0.33657212885154064) 4%,
+    rgba(83, 149, 245, 1) 50%
+  );
+  --gray: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* ################ */
+/* Vertical Scroll */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  box-shadow: 0 -100vh 0 100vh var(--blue), 0 0 15px 5px black;
+}
+
+/* styling */
+/* ################## */
+body {
+  background: var(--white);
+}
+header {
+  background: var(--white);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: fixed;
+}
+header .logo img {
+  width: 45%;
+  cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li a {
+  display: inline-block;
+  color: var(--black);
+  padding: 5px 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transition: 0.2s;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+header nav ul li a:hover {
+  color: var(--blue);
+}
+header nav ul li a button {
+  padding: 10px 22px;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+header nav ul li a button:hover {
+  background: var(--button-hover);
+  transition: 0.4s;
+}
+/* Styling for
+the Navigation menu */
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--blue);
+}
+
+/* ------- Header -------
+Responsiveness */
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 70px;
+    width: 100%;
+    background: var(--white);
+    padding: 30px;
+    transition: 0.3s;
+  }
+  header #nav_check:checked ~ nav {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li a {
+    margin: 5px 0;
+  }
+}
+/*
+---------End---------
+*/
+.hero {
+  width: 100%;
+  background: var(--bgMain);
+  height: 100vh;
+}
+.hero .heroT {
+  /* 
+  padding-top enables the 
+  page not auto hide inside the header */
+  padding-top: 70px;
+  display: flex;
+  /* Not changeable */
+  margin: 0 auto;
+  width: 80%;
+  align-items: center;
+}
+
+/* 
+----- First div of hero -----
+*/
+
+main .heroT .heroF h1 {
+  font-size: 70px;
+  text-transform: capitalize;
+  padding-top: 40px;
+}
+
+main .heroT .heroF p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  padding-top: 20px;
+  letter-spacing: 2px;
+}
+
+main .heroT .heroF a button {
+  margin-top: 20px;
+  color: var(--white);
+  background: var(--blue);
+  border: none;
+  padding: 16px 24px;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main .heroT .heroF a button:hover {
+  background: var(--button-hover);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/* 
+---- Second div of hero -----
+*/
+
+main .heroT .heroS {
+  width: 60%;
+  padding-top: calc(100vh - 700px);
+}
+
+/* 
+------ Responsiveness of hero page ---------
+*/
+@media screen and (max-width: 1220px) {
+  .hero {
+    height: auto;
+    padding-bottom: 100px;
+  }
+
+  main .heroT .heroS {
+    width: 50%;
+  }
+
+  main .heroT .heroF h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+  .hero .heroT {
+    display: block;
+    text-align: center;
+  }
+
+  /* 
+  ----- First div of hero -----
+  */
+
+  main .heroT .heroF h1 {
+    font-size: 48px;
+    padding-top: 50px;
+  }
+
+  main .heroT .heroF p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  main .heroT .heroF a button {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  /* 
+  ---- Second div of hero -----
+  */
+
+  main .heroT .heroS {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  main .heroT .heroS img {
+    width: 100%;
+    height: auto;
+    padding: 15px 0px;
+  }
+}
+
+/* 
+------------ END OF HERO ---------------
+*/
+
+.partners {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.partners h2 {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.partners .childTwo {
+  display: flex;
+  justify-content: space-evenly;
+}
+.childTwo img {
+  width: 15%;
+}
+
+@media screen and (max-width: 550px) {
+  .partners {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
+  }
+
+  .partners h2 {
+    padding-top: 50px;
+    font-size: 24px;
+  }
+
+  .partners .childTwo {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .childTwo img {
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+/* 
+-------- Reviews and Rating -----------
+*/
+
+.rate {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+}
+
+.rate .left {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.rate .right {
+  width: 50%;
+}
+
+.rating h1,
+.review h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  padding: 20px 0px;
+}
+
+.stars i {
+  color: var(--star);
+  padding-bottom: 15px;
+}
+
+.rateCount,
+.revCount,
+.rateLoc,
+.revLoc {
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+
+/* Hear from client */
+.right h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+  font-weight: 600;
+}
+
+.right h3 {
+  color: var(--star);
+  font-size: 20px;
+  letter-spacing: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.right p {
+  padding-top: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 550px) {
+  .rate {
+    display: block;
+    width: 80%;
+    padding-top: 150px;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .rate .left {
+    width: 100%;
+  }
+
+  .rate .right {
+    width: 100%;
+    padding-top: 60px;
+    text-align: start;
+  }
+
+  .rating h1,
+  .review h1 {
+    font-size: 3rem;
+  }
+
+  .right p {
+    padding-bottom: 120px;
+  }
+}
+
+/* 
+------------ END OF RATE AND REVIEW
+*/
+
+.services {
+  width: 100%;
+  background-color: var(--bgMain);
+  padding-top: 60px;
+}
+
+.services .sHead {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.services .sHead h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.services .sHead a button {
+  cursor: pointer;
+  border: none;
+  padding: 16px 20px;
+  font-size: 16px;
+  text-transform: capitalize;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.services .sHead a button:hover {
+  background: var(--button-hover);
+}
+
+.sList {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.sList div {
+  width: 26%;
+  padding-bottom: 100px;
+}
+
+.sList div img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sList div h2 {
+  font-size: 22px;
+  padding-top: 15px;
+}
+
+.sList div p {
+  font-size: 16px;
+  padding-top: 10px;
+  line-height: 19px;
+  padding-bottom: 25px;
+}
+
+.sList div a {
+  color: var(--star);
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 550px) {
+  .services {
+    width: 100%;
+    background-color: var(--bgMain);
+  }
+
+  .services .sHead {
+    display: block;
+    text-align: center;
+  }
+
+  .services .sHead h2 {
+    font-size: 38px;
+  }
+
+  .services .sHead a button {
+    margin-top: 10px;
+  }
+
+  .sList {
+    width: 80%;
+    display: block;
+  }
+
+  .sList div {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 50px;
+  }
+
+  .sList div img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .sList div h2 {
+    font-size: 22px;
+    padding-top: 15px;
+  }
+
+  .sList div p {
+    font-size: 16px;
+    padding-top: 10px;
+    line-height: 19px;
+    padding-bottom: 25px;
+  }
+
+  .sList div a {
+    color: var(--star);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+}
+
+/*  */
+/*  */
+/*  */
+
+.team {
+  padding-top: 90px;
+  padding-bottom: 80px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.teamHead h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+.teamHead p {
+  font-size: 18px;
+  padding-left: 22px;
+  text-transform: capitalize;
+}
+
+.teamItems {
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+}
+
+.teamItems .item {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image {
+  width: 30%;
+  height: auto;
+}
+
+.leadDetails,
+.ceoDetails {
+  display: block;
+}
+
+.item div {
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.item div h2 {
+  font-size: 30px;
+}
+
+.item div h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  color: var(--star);
+  padding-bottom: 18px;
+}
+
+.item div p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 550px) {
+  .team {
+    width: 80%;
+  }
+
+  .teamHead h2 {
+    font-size: 32px;
+  }
+
+  .teamHead p {
+    font-size: 16px;
+    padding-left: 0px;
+    padding-top: 20px;
+  }
+
+  .teamItems {
+    display: block;
+  }
+
+  .teamItems .item {
+    width: 100%;
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  .image {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .leadDetails,
+  .ceoDetails {
+    display: block;
+  }
+
+  .item div {
+    padding-left: 0px;
+  }
+
+  .item div h2 {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+/* 
+--------- End of Team -----------
+*/
+
+.tes {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+.tesH h2 {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+}
+
+.tesH p {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.clients {
+  padding-top: 40px;
+}
+
+.client {
+  padding-bottom: 60px;
+}
+
+.stars i {
+  font-size: 20px;
+}
+
+.clientRow {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.clientText {
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.profile img {
+  width: 30px;
+  height: auto;
+}
+
+.profile h2 {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .tesH h2 {
+    font-size: 30px;
+  }
+
+  .tesH p {
+    font-size: 16px;
+  }
+
+  .client {
+    padding-bottom: 40px;
+  }
+  .clientRow {
+    display: block;
+  }
+
+  .clientText {
+    font-size: 18px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .profile img {
+    width: 30px;
+    height: auto;
+  }
+
+  .profile h2 {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+
+/* 
+
+------ Styling for newsletter ----
+
+*/
+.news {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+  background: var(--bgMain);
+}
+
+.news h2 {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+
+.news p {
+  font-size: 16px;
+  color: var(--gray);
+}
+
+.news form {
+  padding-top: 30px;
+}
+
+.news form input {
+  width: 40%;
+  align-items: center;
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.news form button[type="submit"] {
+  padding: 10px 34px;
+  font-size: 16px;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.news form button[type="submit"]:hover {
+  background: var(--button-hover);
+  transition: 0.3s;
+}
+
+.sMedia {
+  text-align: left;
+  padding-left: 100px;
+  padding-bottom: 70px;
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.sMedia a {
+  padding-right: 10px;
+  color: var(--gray);
+}
+
+.backToUp {
+  text-align: right;
+  padding-right: 26px;
+  padding-bottom: 40px;
+  font-size: 22px;
+}
+
+.backToUp a {
+  color: var(--gray);
+}
+
+.backToUp a:hover,
+.sMedia a:hover {
+  color: var(--blue);
+}
+
+@media screen and (max-width: 550px) {
+  .news h2 {
+    font-size: 28px;
+  }
+
+  .news form {
+    padding-top: 30px;
+  }
+
+  .news form input {
+    width: 70%;
+  }
+
+  .sMedia {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .sMedia a {
+    padding-right: 14px;
+  }
+}
