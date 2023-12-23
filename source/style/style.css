@@ -869,3 +869,21 @@ main .heroT .heroS {
     padding-right: 14px;
   }
 }
+
+/* #################################################
+##                                                ##
+##                                                ##
+##    STYLING AFTER CLICKING ALL SERVICES         ##
+##                IN THE HOMEPAGE                 ##
+##                                                ##
+##                                                ##
+################################################# */
+
+.services .allHead {
+  display: block;
+  text-align: center;
+}
+
+.allHead h2 {
+  font-size: 25px;
+}
