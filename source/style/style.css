@@ -962,3 +962,46 @@ main .heroT .heroS {
 .contact .contact_form form button:hover {
   background: var(--button-hover);
 }
+
+@media screen and (max-width: 550px) {
+  .contact {
+    display: block;
+  }
+
+  .contact .contact_text {
+    text-align: center;
+  }
+
+  .ask2 {
+    text-align: start;
+  }
+
+  .contact .contact_text h2 {
+    font-size: 40px;
+  }
+
+  .contact .contact_text p {
+    padding: 10px 0px;
+    font-size: 16px;
+  }
+
+  .contact .contact_text h3 {
+    font-size: 20px;
+  }
+
+  .contact .contact_form,
+  .contact .contact_text {
+    width: 100%;
+  }
+
+  .contact .contact_form {
+    background-color: var(--bgMain);
+    padding: 20px 10px;
+  }
+
+  .contact .contact_form form input,
+  .contact .contact_form form textarea,
+  .contact .contact_form form button {
+    margin: 15px 0px;
+  }
+}
