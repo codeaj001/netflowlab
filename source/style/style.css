@@ -424,7 +424,7 @@ main .heroT .heroS {
 .services {
   width: 100%;
   background-color: var(--bgMain);
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .services .sHead {
@@ -433,7 +433,6 @@ main .heroT .heroS {
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
 }
 
 .services .sHead h2 {
@@ -553,7 +552,64 @@ main .heroT .heroS {
   }
 }
 
-/*  */
+/* #########
+    END OF SERVICES
+######### */
+
+/*
+#########
+         PRICING
+########### */
+/*
+.pricing {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.priceHead {
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+.priceHead h1 {
+  font-size: 40px;
+}
+
+.priceInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.priceInfo div {
+  width: 100%;
+}
+
+.priceInfo div a {
+  cursor: pointer;
+}
+
+.priceInfo div a button {
+  width: 100%;
+  border: none;
+  background-color: var(--blue);
+  padding: 10px 0px 15px;
+  cursor: pointer;
+}
+
+.priceName {
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.priceInfo div h2 {
+  font-size: 20px;
+}
+
 /*  */
 /*  */
 
@@ -646,7 +702,6 @@ main .heroT .heroS {
 
   .image {
     width: 60%;
-    height: auto;
     border-radius: 10px;
   }
 
@@ -957,10 +1012,12 @@ main .heroT .heroS {
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .contact .contact_form form button:hover {
   background: var(--button-hover);
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 550px) {
@@ -1003,5 +1060,86 @@ main .heroT .heroS {
   .contact .contact_form form textarea,
   .contact .contact_form form button {
     margin: 15px 0px;
+  }
+}
+
+/* #################################################
+##                                                ##
+##                                                ##
+##    STYLING OF READMORE PAGE                    ##
+##                                                ##
+##                                                ##
+##                                                ##
+################################################# */
+
+.readMore {
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rmMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.rmMain div {
+  width: 50%;
+  text-align: center;
+}
+
+.rmImage img {
+  width: 70%;
+}
+
+.rmText {
+  padding-top: 8%;
+}
+
+.rmText h2 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.callTA {
+  padding: 40px;
+}
+
+.callTA a button {
+  padding: 15px 100px;
+  border: none;
+  background-color: var(--blue);
+  cursor: pointer;
+  color: var(--white);
+  transition: 0.3s;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.callTA a button:hover {
+  background: var(--button-hover);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 550px) {
+  .rmMain {
+    display: block;
+  }
+
+  .rmMain div {
+    width: 100%;
+  }
+
+  .rmImage img {
+    width: 60%;
+  }
+
+  .rmText h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .callTA {
+    padding: 20px 0px;
   }
 }
